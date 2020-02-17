@@ -9,17 +9,16 @@ import {
   Box,
   styled,
   fade,
-  InputBase, withStyles,
+  InputBase,
+  withStyles,
 } from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
 import Head from 'next/head';
-import { MDXProvider } from '@mdx-js/tag';
-import 'prismjs/themes/prism.css'
+import 'prismjs/themes/prism.css';
 
 import { theme } from '../assets/styles/theme';
 import { LogoRound } from '../assets/images/logo-round';
 import { globalStyles } from '../assets/styles/global-styles';
-import { components } from '../components/components';
 
 const Bar = styled(AppBar)({
   height: 64,
@@ -116,7 +115,6 @@ class AppRoot extends App {
           <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
         </Head>
         <ThemeProvider theme={theme}>
-          <MDXProvider components={components}>
           <Container>
             <Bar position="fixed">
               <Box flex={4}>
@@ -137,7 +135,7 @@ class AppRoot extends App {
                   <SearchInputWrapper
                     placeholder="Search…"
                     inputProps={{ 'aria-label': 'search' }}
-                    inputComponent={SearchInput}
+                    inputComponent={({inputRef, ...props}) => <SearchInput {...props} />}
                   />
                 </Search>
               </Box>
@@ -151,7 +149,6 @@ class AppRoot extends App {
               </Docs>
             </Content>
           </Container>
-          </MDXProvider>
         </ThemeProvider>
         <CssBaseline />
       </>

@@ -2,3 +2,4 @@
 /// <reference types="next/types/global" />
 declare module '*.svg';
 declare module '@mdx-js/tag';
+declare module '*md';

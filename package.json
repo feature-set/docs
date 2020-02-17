@@ -8,23 +8,27 @@
   "license": "ISC",
   "scripts": {
     "dev": "next",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start"
   },
   "dependencies": {
     "@material-ui/core": "^4.9.2",
     "@material-ui/icons": "^4.9.1",
     "@mdx-js/tag": "^0.20.3",
+    "markdown-to-jsx": "^6.11.0",
     "next": "^9.2.1",
+    "prism-react-renderer": "^1.0.2",
     "prismjs": "^1.19.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-markdown": "^4.3.1",
     "typeface-roboto": "^0.0.75"
   },
   "devDependencies": {
     "@mdx-js/loader": "^1.5.5",
     "@next/mdx": "^9.2.1",
     "@svgr/webpack": "^5.1.0",
+    "@types/markdown-to-jsx": "^6.9.1",
     "@types/node": "^13.7.1",
     "@types/prismjs": "^1.16.0",
     "@typescript-eslint/eslint-plugin": "2.x",
@@ -38,7 +42,9 @@
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "7.x",
     "eslint-plugin-react-hooks": "1.x",
+    "file-loader": "^5.0.2",
     "prettier": "^1.19.1",
+    "raw-loader": "^4.0.0",
     "typescript": "^3.7.5"
   },
   "eslintConfig": {
